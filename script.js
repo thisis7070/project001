@@ -6,25 +6,36 @@ if (form) {
 
         event.preventDefault();
 
-        const studentName =
-            document.getElementById("studentName").value;
+        // Get role
+        const role = document.getElementById("role").value;
 
-        const adminId =
-            document.getElementById("adminId").value;
+        // Get user ID / name
+        const userId = document.getElementById("userId").value;
 
-        const password =
-            document.getElementById("password").value;
+        // Get password
+        const password = document.getElementById("password").value;
 
-        if (studentName === "" || adminId === "" || password === "") {
+        // Check all fields
+        if (role === "" || userId === "" || password === "") {
 
             alert("Please fill all fields!");
 
             return;
         }
 
-        localStorage.setItem("studentName", studentName);
+        // Save user information
+        localStorage.setItem("userId", userId);
+        localStorage.setItem("role", role);
 
-        window.location.href = "dashboard.html";
+        // Redirect according to role
+        if (role === "student") {
+
+            window.location.href = "student-dashboard.html";
+
+        } else if (role === "admin") {
+
+            window.location.href = "admin-dashboard.html";
+        }
     });
 }
 
@@ -43,7 +54,26 @@ function viewSkills() {
 
 function logout() {
 
-    localStorage.removeItem("studentName");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("role");
 
     window.location.href = "index.html";
 }
+
+function showWelcomeMessage() {
+
+    const userId = localStorage.getItem("userId");
+
+    const welcomeMessage =
+        document.getElementById("welcomeMessage");
+
+    if (welcomeMessage && userId) {
+
+        welcomeMessage.textContent =
+            "Welcome, " + userId + " 👋";
+    }
+}
+
+showWelcomeMessage();
+
+

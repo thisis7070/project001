@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Skill Gap Analyzer</title>
 
@@ -16,13 +17,18 @@
 
         <form>
 
-            <label class = "box" >Student </label>
-            <input type="text" id="studentName" placeholder="Enter your name">
+            <label class="box">Role</label>
 
-            <label class = "box" >Admin</label>
-            <input type="text" id="adminId" placeholder="Enter your id">
+            <select id="role">
+                <option value="">Select Role</option>
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+            </select>
 
-            <label class = "box" >Password</label>
+            <label class="box">Name / ID</label>
+            <input type="text" id="userId" placeholder="Enter your name or ID">
+
+            <label class="box">Password</label>
             <input type="password" id="password" placeholder="Enter your password">
 
             <button type="submit">Login</button>
@@ -30,7 +36,10 @@
         </form>
 
     </div>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
+
