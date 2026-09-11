@@ -1,11 +1,17 @@
+
+/* Remove default spacing problems */
 * {
     box-sizing: border-box;
 }
 
+
+/* Main page */
 body {
     margin: 0;
     min-height: 100vh;
+
     font-family: Arial, sans-serif;
+
     background-color: #f2f5ff;
 
     display: flex;
@@ -13,14 +19,22 @@ body {
     align-items: center;
 }
 
+
+/* Login Box */
 .login-box {
     width: 410px;
+
     padding: 35px;
+
     background-color: white;
+
     border-radius: 12px;
+
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Headings */
 h1 {
     text-align: center;
     margin-bottom: 45px;
@@ -31,55 +45,111 @@ h2 {
     margin-bottom: 40px;
 }
 
+
+/* Labels */
 .box {
     display: block;
+
     font-weight: bold;
+
     margin-top: 18px;
     margin-bottom: 7px;
 }
 
+
+/* Text input */
 input {
     width: 100%;
+
     padding: 12px;
+
     border: 1px solid #aaa;
+
     border-radius: 5px;
+
     font-size: 14px;
 }
 
-input:focus {
+
+/* Select */
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    background-color: white;
+}
+
+
+/* Input and Select focus */
+input:focus,
+select:focus {
     outline: none;
+
     border-color: #4a6cf7;
 }
 
+
+/* Buttons */
 button {
     width: 100%;
+
     padding: 12px;
+
     margin-top: 25px;
+
     border: none;
+
     border-radius: 5px;
+
     background-color: #4a6cf7;
+
     color: white;
+
     font-size: 16px;
+
     cursor: pointer;
 }
 
+
+/* Button hover */
 button:hover {
     background-color: #3451c7;
 }
+
+
+/* Dashboard */
 .dashboard {
     width: 600px;
+
     padding: 40px;
+
     background-color: white;
+
     border-radius: 12px;
+
     text-align: center;
+
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Dashboard buttons */
 .dashboard-buttons {
     margin-top: 30px;
 }
 
+
+/* Dashboard button spacing */
 .dashboard-buttons button {
     margin: 10px;
+
     width: 80%;
 }
+

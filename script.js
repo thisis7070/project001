@@ -77,3 +77,47 @@ function showWelcomeMessage() {
 showWelcomeMessage();
 
 
+function showAdminWelcome() {
+
+    const userId = localStorage.getItem("userId");
+
+    const adminWelcome =
+        document.getElementById("adminWelcome");
+
+    if (adminWelcome && userId) {
+
+        adminWelcome.textContent =
+            "Welcome, " + userId + " 👋";
+    }
+}
+
+
+showAdminWelcome();
+
+
+function manageRoles() {
+
+    const roleName = prompt("Enter Job Role:");
+
+    if (roleName === null || roleName.trim() === "") {
+
+        alert("Job role is required!");
+
+        return;
+    }
+
+    alert("Job Role Added: " + roleName);
+}
+
+
+function manageSkills() {
+
+    alert("Skill Management will be added here!");
+}
+
+
+function manageResources() {
+
+    alert("Learning Resources Management will be added here!");
+}
+

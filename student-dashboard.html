@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Student Dashboard</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,20 +14,31 @@
 
         <h1>Skill Gap Analyzer</h1>
 
-        <h2 id="welcomeMessage">Welcome Student 👋</h2>
+        <!-- Dynamic Welcome Message -->
+        <h2 id="welcomeMessage">
+            Welcome Student 👋
+        </h2>
 
-        <p>Analyze your skills and find your skill gaps.</p>
+        <p>
+            Analyze your skills and find your skill gaps.
+        </p>
+
 
         <div class="dashboard-buttons">
 
+            <!-- Start Analysis -->
             <button onclick="startAnalysis()">
                 Start Skill Analysis
             </button>
 
+
+            <!-- My Skills -->
             <button onclick="viewSkills()">
                 My Skills
             </button>
 
+
+            <!-- Logout -->
             <button onclick="logout()">
                 Logout
             </button>
@@ -34,8 +47,10 @@
 
     </div>
 
+
     <script src="script.js"></script>
 
 </body>
 
 </html>
+
